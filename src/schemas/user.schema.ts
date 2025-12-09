@@ -13,6 +13,9 @@ export class User extends Document {
   @Prop({ required: true, minlength: 6 })
   password: string;
 
+  @Prop({ required: false })
+  refreshToken?: string;
+
   @Prop({ default: Date.now })
   createdAt: Date;
 }
